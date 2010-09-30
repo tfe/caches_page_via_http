@@ -2,5 +2,11 @@
 
 Modifies caches_page on Rails to use HTTP headers instead of filesystem dumps.
 
+Sets both <tt>Cache-Control</tt> and <tt>Expires</tt> headers. You can pass in a custom TTL (default is 5 minutes) like so:
+
+<tt>caches_page :index, :expires_in => 6.hours</tt>
+
 Extracted from the patch by Ricardo Chimal:
 http://github.com/ricardochimal/rails/commit/ecd52a0f6b841d8a84f95fddff1ae4c774e4440e
+
+Modified by Todd Eichel (http://toddeichel.com/) for Fooala, Inc. (http://opensource.fooala.com/).
